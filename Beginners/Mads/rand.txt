@@ -1,0 +1,2 @@
+adjectives = ['red','blue','green','yellow']
+verbs = ['yes','no','bye']
