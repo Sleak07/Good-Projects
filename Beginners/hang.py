@@ -22,7 +22,7 @@ from random import choice
 
 
 def select_word():
-    with open("words,txt", "r") as words:
+    with open("words.txt", "r") as words:
         word_list = words.readlines()
     return choice(word_list).strip()
 
@@ -182,10 +182,7 @@ if __name__ == "__main__":
     while not game_over(wrong_guesses, target_word, guessed_letters):
         draw_hanged_man(wrong_guesses)
         print(f"Your word is: {guessed_word}")
-        print(
-            "Current guessed letters: "
-            f"{join_guessed_letter(guessed_letters)}\n"
-        )
+        print(f"Current guessed letters: {join_guessed_letter(guessed_letters)}\n")
 
         player_guess = get_player_input(guessed_letters)
         if player_guess in target_word:
@@ -196,4 +193,3 @@ if __name__ == "__main__":
 
         guessed_letters.add(player_guess)
         guessed_word = build_guessed_word(target_word, guessed_letters)
-
