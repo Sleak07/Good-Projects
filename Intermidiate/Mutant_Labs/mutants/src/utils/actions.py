@@ -80,4 +80,3 @@ if __name__ == "__main__":
     Rev = reverse_segment("ATGCGTAAC")  # Expected result: "CAATGCGTA"
 
     Ins = insert_segment("ATGCGTAAC", 4, "CC")
-
